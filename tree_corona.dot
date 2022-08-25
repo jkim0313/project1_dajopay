@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="전년_동월_대비 <= 0.5\ngini = 0.408\nsamples = 84\nvalue = [24, 60]\nclass = 1", fillcolor="#88c4ef"] ;
+1 [label="소매판매지수 <= 0.016\ngini = 0.498\nsamples = 45\nvalue = [24, 21]\nclass = 0", fillcolor="#fcefe6"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="등락률 <= 0.094\ngini = 0.204\nsamples = 26\nvalue = [23, 3]\nclass = 0", fillcolor="#e89153"] ;
+1 -> 2 ;
+3 [label="날짜 <= 201305.0\ngini = 0.083\nsamples = 23\nvalue = [22, 1]\nclass = 0", fillcolor="#e68742"] ;
+2 -> 3 ;
+4 [label="소매판매지수 <= -0.033\ngini = 0.444\nsamples = 3\nvalue = [2, 1]\nclass = 0", fillcolor="#f2c09c"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0]\nclass = 0", fillcolor="#e58139"] ;
+4 -> 5 ;
+6 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = 1", fillcolor="#399de5"] ;
+4 -> 6 ;
+7 [label="gini = 0.0\nsamples = 20\nvalue = [20, 0]\nclass = 0", fillcolor="#e58139"] ;
+3 -> 7 ;
+8 [label="소비자물가지수 <= -0.003\ngini = 0.444\nsamples = 3\nvalue = [1, 2]\nclass = 1", fillcolor="#9ccef2"] ;
+2 -> 8 ;
+9 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = 0", fillcolor="#e58139"] ;
+8 -> 9 ;
+10 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2]\nclass = 1", fillcolor="#399de5"] ;
+8 -> 10 ;
+11 [label="소비자물가지수 <= 0.005\ngini = 0.1\nsamples = 19\nvalue = [1, 18]\nclass = 1", fillcolor="#44a2e6"] ;
+1 -> 11 ;
+12 [label="gini = 0.0\nsamples = 18\nvalue = [0, 18]\nclass = 1", fillcolor="#399de5"] ;
+11 -> 12 ;
+13 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = 0", fillcolor="#e58139"] ;
+11 -> 13 ;
+14 [label="gini = 0.0\nsamples = 39\nvalue = [0, 39]\nclass = 1", fillcolor="#399de5"] ;
+0 -> 14 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
